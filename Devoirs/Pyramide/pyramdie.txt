@@ -1,0 +1,5 @@
+          hauteur-1
+   *      3espc               1 *
+  ***     2espc               3 *
+ *****    1espc               5 *
+********  0espc               7 *
