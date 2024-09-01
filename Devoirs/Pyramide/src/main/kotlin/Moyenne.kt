@@ -1,20 +1,24 @@
 import kotlin.random.Random
 
-fun main(n:Int):Array<String>{
-    return createTable()
-
-
+fun main(){
+    println("allo")
+   createTable(4)
+    average(4)
 }
 
-private fun createTable(): Array<Int> {
-    var array = Array<Int>(100){}
+private fun createTable(n:Int): Array<Int> {
+
+    var array = Array<Int>(n){Random.nextInt(0, 100)}
+    for(i in array)
+    {
+        println(i)
+    }
     return array
 }
 
-private fun average() {
-    val randomValue = Array(10) { Random.nextInt(0, 100) }
-    println(randomValue)
-    println(randomValue.average())
+private fun average(n: Int) {
+
+    println(createTable(n).average())
 }
 
 private fun Max() {
@@ -31,6 +35,6 @@ private fun Min() {
 
 private fun ListeDeChiffreHasardSum() {
     val randomValue = Array(10) { Random.nextInt(0, 100) }
-   println(randomValue)
+    println(randomValue)
     println(randomValue.sum())
 }
