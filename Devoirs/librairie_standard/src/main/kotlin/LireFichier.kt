@@ -10,8 +10,8 @@ fun main(args: Array<String>) {
         var list1: List<String> = texte1.split("\n")
         println(list1)
 
-//        var texte2: String =list1.joinToString("--------")
-//        println(texte2)
+        var texte2: String =list1.joinToString("--------")
+        println(texte2)
     } else {
         println("Le fichier exist pas")
     }
