@@ -8,7 +8,7 @@ fun main() {
     // Tu peux tester la fonction en l'appelant ici.
    val mots= listOf("Comment", "est", "votre", "blanquette ?")
     jsoup(mots)
-    
+
 }
 
 
