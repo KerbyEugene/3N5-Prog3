@@ -44,17 +44,11 @@ fun main() {
  * </body>
  */
 fun jsoup(mots: List<String>): Document {
-   val doc: Document = Jsoup.connect("https://info.cegepmontpetit.ca/3N5-Prog3/intraA24-2.html").get()
-   val body: Element= doc.body()
+    val doc: Document = Jsoup.connect("https://info.cegepmontpetit.ca/3N5-Prog3/intraA24-2.html").get()
     for(mot in mots){
-        body.appendElement("div").text(mot)
+        var div= doc.select("body").first()
+        div.append("<div>$mot/div")
     }
-    println(doc.outerHtml())
-    val doc2:Document= Jsoup.connect("https://info.cegepmontpetit.ca/3N5-Prog3/tp/tp2").get()
-    val images:List<Element> = doc2.select("img")
-    for (image in images){
-        val src = image.attr("src")
-        println(src)
-    }
+    println(doc.html())
     return doc
 }
