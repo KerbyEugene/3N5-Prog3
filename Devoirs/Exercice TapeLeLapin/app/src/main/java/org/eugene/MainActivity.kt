@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity() {
    private lateinit var binding : ActivityMainBinding;
 
     private lateinit var listeBoutons:List<Button>
+    var scoretoops= 0
+    var scoreflops=0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +40,11 @@ class MainActivity : AppCompatActivity() {
             binding.btn8,
             binding.btn9,
         )
+        for(btn in listeBoutons){
+            btn.setOnClickListener(View.OnClickListener{
+                click(it)
+            })
+        }
         initialiser()
     }
     fun initialiser(){
@@ -45,10 +52,26 @@ class MainActivity : AppCompatActivity() {
             btn.setText("taupe")
         }
         //choisir le lapin au hasard
-
+        val boutonLapin:Button=listeBoutons.random()
+        boutonLapin.setText("Lapin")
         //mettre le reste taupe
     }
-    fun click(){
+    fun click(it:View){
+//detecter si cest lapin
+        val buttonclick:Button=it as Button
+        if(buttonclick.text=="Lapin"){
+            buttonclick.setText("Taupe")
+            scoretoops++
+            initialiser()
+        }else{
+            //calcule des score
+            scoreflops++
+        }
+    binding.tvTops.setText("Tops:$scoretoops")
+        binding.Flops.setText("Flops:$scoreflops")
+
+
+
 
     }
 }
