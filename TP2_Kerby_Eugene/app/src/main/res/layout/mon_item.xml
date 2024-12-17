@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvElement"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:text="salut"
+        android:ellipsize="none"
+        android:textSize="24dp"
+        android:breakStrategy="high_quality"/>
+    <ImageButton
+        android:id="@+id/btnElement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="A tiny Android icon"
+        android:src="@drawable/baseline_check_circle_outline_24"
+        app:tint="#ff0000" />
+
+</LinearLayout>
